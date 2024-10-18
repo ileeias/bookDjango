@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Author Create</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+
+        <p>
+            <label> Author Surname:</label>
+            <input type="text" name="author_surname">
+        </p>
+
+        <p>
+            <label>Author Name:</label>
+            <input type="text" name="author_name">
+        </p>
+
+        <p>
+            <label>Author Bio:</label>
+            <input type="text" name="author_bio">
+        </p>
+
+        <input type="submit" value="Create Author">
+    </form>
+</body>
+</html>

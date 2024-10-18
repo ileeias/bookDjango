@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Author Detail</title>
+</head>
+<body>
+    {% if author %}
+        <h1 align="center">{{ author.name }} {{ author.surname }}</h1>
+        <h3>{{ author.bio }}</h3>
+
+        <form action="{% url 'author_delete_url' author.id %}"
+              method="post">
+            {% csrf_token %}
+            <input type="submit" value="delete">
+        </form>
+    {% else %}
+        <h1 align="center">
+            Наша библиотека, пока еще, не такая обширная
+        </h1>
+    {% endif %}
+
+</body>
+</html>

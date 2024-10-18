@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authors List</title>
+</head>
+<body>
+    <h1>{{ word }}</h1>
+     {% for author in authors %}
+        <p>{{ author.name }}</p>
+     {% endfor %}
+     <a href="{% url 'main_url' %}">Главная</a>
+     <a href="{% url 'author_create_url' %}">Добавить</a>
+</body>
+</html>

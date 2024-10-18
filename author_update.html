@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Author Update</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+
+        <p>
+            <label>Author Surname:</label>
+            <input type="text" name="author_surname"
+                   value="{{ author.surname }}">
+        </p>
+
+        <p>
+            <label>Author Name:</label>
+            <input type="text" name="author_name"
+                   value="{{ author.name }}">
+        </p>
+
+        <p>
+            <label>Author Bio:</label>
+            <input type="text" name="author_bio"
+                   value="{{ author.bio }}">
+        </p>
+
+        <input type="submit" value="Update Author">
+    </form>
+</body>
+</html>
